@@ -1,0 +1,40 @@
+my:
+  name: zaq
+  age: 22
+  number: ${random.int[1001,1999]}
+  uuid: ${random.int(10)}
+  max: ${random.uuid}
+  value: ${random.value}
+  greeting: Hi,I'm {my.name}
+  
+server:
+  port: 8081
+  
+#spring:
+#  profiles:
+#    active: prod
+    
+management:
+  security:
+    enabled: true #安全认证开关
+  port: 8888 #管理端口变成8888
+  context-path: /abc #actuator的访问路径
+ 
+ #配置安全
+security:
+  user:
+    name: admin
+    password: admin
+ #配置端点
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: true   
+info:
+   app:
+      name: spring-boot-actuator
+      version: 1.0.0  
+      
+      
+      
