@@ -1,0 +1,9 @@
+@SpringBootApplication:启动程序
+
+端口问题在resource下的application.properties中写入:server.port:8081(代码大致如此，没跟上)
+
+没运行的程序用：maven package打成jar包
+进入target下，
+然后：java -jar jar包的名字
+
+mvn springboot-run
